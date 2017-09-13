@@ -3,31 +3,31 @@
 <div id="main">
     <div class="sidebar">
         <div class="sidebar-inner">
-            <h3>ZRender</h3>
+            <h3>zrender</h3>
             <ol>
                 <li>
-                    <a href="#zrenderdisposezr">dispose( )</a>
+                    <a href="#zrenderdisposezr">dispose()</a>
                 </li>
                 <li>
-                    <a href="#zrendergetinstanceid">getInstance( )</a>
+                    <a href="#zrendergetinstanceid">getInstance()</a>
                 </li>
                 <li>
                     <a href="#">Group</a>
                     <ol>
                         <li>
-                            <a href="#group.add">add( )</a>
+                            <a href="#group.add">add()</a>
                         </li>
                         <li>
-                            <a href="#group.remove">remove( )</a>
+                            <a href="#group.remove">remove()</a>
                         </li>
                         <li>
-                            <a href="#group.animate">animate( )</a>
+                            <a href="#group.animate">animate()</a>
                         </li>
                         <li>
-                            <a href="#group.animateTo">animateTo( )</a>
+                            <a href="#group.animateTo">animateTo()</a>
                         </li>
                         <li>
-                            <a href="#group.position">position( )</a>
+                            <a href="#group.position">position()</a>
                         </li>
                     </ol>
                 </li>
@@ -45,7 +45,7 @@
                 </li>
 
                 <li>
-                    <a href="#zrenderinitdom-opts">init( )</a>
+                    <a href="#zrenderinitdom-opts">init()</a>
                 </li>
 
                 <li>
@@ -65,26 +65,91 @@
                 </li>
             </ol>
 
-            <h3>ZRender Instance</h3>
+            <h3>zrender 实例</h3>
             <ol>
                 <li>
-                    <a href="#zr.add">add</a>
+                    <a href="#addel">add()</a>
                 </li>
                 <li>
-                    <a href="#zr.refresh">refresh</a>
+                    <a href="#addhoverel-style">addHover()</a>
                 </li>
                 <li>
-                    <a href="#zr.refreshImmediately">refreshImmediately</a>
+                    <a href="#animation">animation</a>
                 </li>
                 <li>
-                    <a href="#zr.remove">remove</a>
+                    <a href="#clear">clear()</a>
+                </li>
+                <li>
+                    <a href="#clearanimation">clearAnimation()</a>
+                </li>
+                <li>
+                    <a href="#clearhover">clearHover()</a>
+                </li>
+                <li>
+                    <a href="#configlayerzlevel-config">configLayer()</a>
+                </li>
+                <li>
+                    <a href="#dispose">dispose()</a>
+                </li>
+                <li>
+                    <a href="#dom">dom</a>
+                </li>
+                <li>
+                    <a href="#flush">flush</a>
+                </li>
+                <li>
+                    <a href="#getheight">getHeight()</a>
+                </li>
+                <li>
+                    <a href="#getid">getId()</a>
+                </li>
+                <li>
+                    <a href="#getwidth">getWidth()</a>
+                </li>
+                <li>
+                    <a href="#id">id</a>
+                </li>
+                <li>
+                    <a href="#offeventname-eventhandler">off()</a>
+                </li>
+                <li>
+                    <a href="#oneventname-eventhandler-context">on()</a>
+                </li>
+                <li>
+                    <a href="#refresh">refresh()</a>
+                </li>
+                <li>
+                    <a href="#refreshhover">refreshHover()</a>
+                </li>
+                <li>
+                    <a href="#refreshhoverimmediately">refreshHoverImmediately()</a>
+                </li>
+                    <a href="#refreshimmediately">refreshImmediately()</a>
+                </li>
+                <li>
+                    <a href="#removeel">remove()</a>
+                </li>
+                <li>
+                    <a href="#removehoverel">removeHover()</a>
+                </li>
+                <li>
+                    <a href="#resizeopts">resize()</a>
+                </li>
+                <li>
+                    <a href="#triggereventname-event">trigger()</a>
                 </li>
             </ol>
         </div>
     </div><!-- end of sidebar -->
 
     <div class="api-content">
+        <h2>zrender</h2>
         {% for api in site.api_zrender %}
+            {{ api.content }}
+        {% endfor %}
+
+        <h2>zrender 实例</h2>
+        {% for api in site.api_zrender_instance %}
             {{ api.content }}
         {% endfor %}
     </div>

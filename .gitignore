@@ -2,3 +2,5 @@ dist
 .sass-cache
 .jekyll-metadata
 node_modules
+src/Gemfile.lock
+src/lib
