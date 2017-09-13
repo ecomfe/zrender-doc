@@ -1,0 +1,27 @@
+{
+  "name": "zrender-doc",
+  "version": "1.0.0",
+  "description": "ZRender Documentation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecomfe/zrender-doc.git"
+  },
+  "keywords": [
+    "zrender",
+    "canvas",
+    "svg",
+    "2d"
+  ],
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/ecomfe/zrender-doc/issues"
+  },
+  "homepage": "https://github.com/ecomfe/zrender-doc",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

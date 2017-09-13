@@ -1,0 +1,97 @@
+{% include header.html %}
+
+<div id="main">
+    <div class="sidebar">
+        <div class="sidebar-inner">
+            <h3>ZRender</h3>
+            <ol>
+                <li>
+                    <a href="#zrenderdisposezr">dispose( )</a>
+                </li>
+                <li>
+                    <a href="#zrendergetinstanceid">getInstance( )</a>
+                </li>
+                <li>
+                    <a href="#">Group</a>
+                    <ol>
+                        <li>
+                            <a href="#group.add">add( )</a>
+                        </li>
+                        <li>
+                            <a href="#group.remove">remove( )</a>
+                        </li>
+                        <li>
+                            <a href="#group.animate">animate( )</a>
+                        </li>
+                        <li>
+                            <a href="#group.animateTo">animateTo( )</a>
+                        </li>
+                        <li>
+                            <a href="#group.position">position( )</a>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <a href="#">Image</a>
+                    <ol>
+                        <li>
+                            <a href="#image.style">style</a>
+                        </li>
+                        <li>
+                            <a href="#image.position">position</a>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <a href="#zrenderinitdom-opts">init( )</a>
+                </li>
+
+                <li>
+                    <a href="#">Text</a>
+                    <ol>
+                        <li>
+                            <a href="#text.style">style</a>
+                        </li>
+                        <li>
+                            <a href="#text.position">position</a>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <a href="#zrenderversion">version</a>
+                </li>
+            </ol>
+
+            <h3>ZRender Instance</h3>
+            <ol>
+                <li>
+                    <a href="#zr.add">add</a>
+                </li>
+                <li>
+                    <a href="#zr.refresh">refresh</a>
+                </li>
+                <li>
+                    <a href="#zr.refreshImmediately">refreshImmediately</a>
+                </li>
+                <li>
+                    <a href="#zr.remove">remove</a>
+                </li>
+            </ol>
+        </div>
+    </div><!-- end of sidebar -->
+
+    <div class="api-content">
+        {% for api in site.api_zrender %}
+            {{ api.content }}
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% include footer.html %}
+
+<script src="{{ site.url }}/js/api.js"></script>
