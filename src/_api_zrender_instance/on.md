@@ -11,7 +11,7 @@
 |---|---|---|---|
 |`eventName`|`string`||事件名称，支持： `'click'`、 `'mousedown'`、 `'mouseup'`、 `'mousewheel'`、 `'dblclick'`、 `'contextmenu'`。|
 |`eventHandler`|`Function`||事件处理的回调函数。|
-|（可选） `context`|`Object`||函数上下文。|
+|`context`|`Object`||函数上下文。|
 
 #### 相关
 
