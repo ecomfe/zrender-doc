@@ -3,4 +3,4 @@
 
 ### animation
 
-类型：[`Animatoin`](#zrenderanimation)，动画。
+类型：`Animatoin`，动画。

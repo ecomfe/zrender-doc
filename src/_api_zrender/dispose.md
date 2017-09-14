@@ -9,7 +9,7 @@
 
 |属性|类型|默认值|描述|
 |---|---|---|---|
-| zr | `zrender` | | ZRender 实例，由 `zrender.init` 创建。不传则销毁全部。 |
+| zr | `zrender` | | ZRender 实例，由 [`zrender.init`](#zrenderinitdom-opts) 创建。不传则销毁全部。 |
 
 #### 返回值
 
