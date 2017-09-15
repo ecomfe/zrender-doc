@@ -3,17 +3,19 @@
 
 ### zrender.Displayable
 
+**继承自 [zrender.Element](#zrenderelement)**
+
 **抽象类**
 
-形状。
-
-#### 构造函数
-
-`zrender.Displayable(opts)`
+可显示的元素。
 
 > **注意：**
 >
 > `zrender.Displayable` 是一个抽象类，所以不要在代码中 `new zrender.Displayable(opts)`，这里的构造函数只是用于表明其子类（如 [Rect](#zrenderrect) 等）构造函数参数的共同部分。
+
+#### 构造函数
+
+`zrender.Displayable(opts)`
 
 |属性|类型|默认值|描述|
 |---|---|---|---|
@@ -78,50 +80,3 @@
 |opts.zlevel|`number`|`0`|决定绘画在哪层 Canvas 中。Canvas 分层是一种常见的优化手段。我们可以把一些图形变化频繁（例如有动画）的组件设置成一个单独的 `zlevel`。需要注意的是过多的 Canvas 会引起内存开销的增大，在手机端上需要谨慎使用以防崩溃。`zlevel` 大的 Canvas 会放在 `zlevel` 小的 Canvas 的上面。|
 |opts.z|`number`|`0`|控制图形的前后顺序。`z` 值小的图形会被 `z` 值大的图形覆盖。`z` 相比 `zlevel` 优先级更低，而且不会创建新的 Canvas。|
 |opts.z2|`number`|`0`|与 `z` 类似，优先级比 `z` 更低。|
-
-
-### zrender.Displayable.hide()
-
-隐藏元素，可以使用 [zrender.Displayable.show](#zrenderdisplayableshow) 恢复显示。
-
-#### 相关
-
-[zrender.Displayable.show](#zrenderdisplayableshow)。
-
-
-
-### zrender.Displayable.removeClipPath()
-
-取消设置裁剪元素。
-
-#### 相关
-
-[zrender.Displayable.setClipPath](#zrenderdisplayablesetclippathclippath)。
-
-
-
-### zrender.Displayable.setClipPath(clipPath)
-
-设置裁剪元素，超出 `clipPath` 区域的部分将被裁剪掉。
-
-一个元素只能被一个元素裁剪，如果要实现多个元素的裁剪，需要使用 [zrender.CompoundPath](#zrendercompoundpath)。
-
-#### 参数
-
-|属性|类型|默认值|描述|
-|---|---|---|---|
-| clipPath | `Displayable` | | 设置当前元素的裁剪元素。 |
-
-#### 相关
-
-[zrender.Displayable.removeClipPath](#zrenderdisplayableremoveclippath)。
-
-
-
-### zrender.Displayable.show()
-
-显示元素。元素在默认情况下是显示状态，使用 [zrender.Displayable.hide](#zrenderdisplayablehide) 隐藏后，可以使用此方法显示。
-
-#### 相关
-
-[zrender.Displayable.hide](#zrenderdisplayablehide)。
