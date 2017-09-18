@@ -33,11 +33,16 @@ zr.add(g);
 
 添加子节点到最后。
 
+#### 参数
+
 |属性|类型|默认值|描述|
 |---|---|---|---|
 |child|[`Element`](#zrenderelement)||待添加的元素。|
 
-返回 `this`。
+### 返回值
+
+`this`。
+
 
 #### 相关
 
@@ -49,12 +54,16 @@ zr.add(g);
 
 添加子节点到 `nextSibling` 之前。
 
+#### 参数
+
 |属性|类型|默认值|描述|
 |---|---|---|---|
 |child|[`Element`](#zrenderelement)||待添加的元素。|
 |nextSibling|[`Element`](#zrenderelement)||已经在 Group 中的元素。|
 
-返回 `this`。
+### 返回值
+
+`this`。
 
 #### 相关
 
@@ -108,14 +117,12 @@ zr.add(g);
 
 遍历所有子节点。
 
+#### 参数
+
 |属性|类型|默认值|描述|
 |---|---|---|---|
 |cb|`Function`||回调函数。|
 |context|`Object`||执行回调函数的上下文。|
-
-#### 相关
-
-[zrender.Group.traverse](#zrendergrouptraversecb-context)。
 
 
 
@@ -123,9 +130,15 @@ zr.add(g);
 
 得到 `includeChildren` 或组内所有元素的包围盒。
 
+#### 参数
+
 |属性|类型|默认值|描述|
 |---|---|---|---|
-|includeChildren|[`Element[]`](#zrenderelement)||组内元素的子集。如果 `includeChildren` 未设置，则获取所有元素的包围盒，否则获得 `includeChildren` 的包围盒。|
+|includeChildren|[`zrender.Element[]`](#zrenderelement)||组内元素的子集。如果 `includeChildren` 未设置，则获取所有元素的包围盒，否则获得 `includeChildren` 的包围盒。|
+
+### 返回值
+
+`includeChildren` 或组内所有元素的包围盒，类型：[`zrender.BoundingRect`](#zrenderboundingrect)。
 
 
 
@@ -133,9 +146,11 @@ zr.add(g);
 
 移除子节点。
 
+#### 参数
+
 |属性|类型|默认值|描述|
 |---|---|---|---|
-|child|[`Element`](#zrenderelement)||待移除的元素。|
+|child|[`zrender.Element`](#zrenderelement)||待移除的元素。|
 
 #### 相关
 
@@ -156,18 +171,3 @@ zr.add(g);
 ### zrender.Group.silent
 
 类型：`boolean`，默认值：`false`，所有子孙元素是否响应鼠标事件。
-
-
-
-### zrender.Group.traverse(cb, context)
-
-深度优先遍历所有子孙节点。
-
-|属性|类型|默认值|描述|
-|---|---|---|---|
-|cb|`Function`||回调函数。|
-|context|`Object`||执行回调函数的上下文。|
-
-#### 相关
-
-[zrender.Group.eachChild](#zrendergroupeachchildcb-context)。

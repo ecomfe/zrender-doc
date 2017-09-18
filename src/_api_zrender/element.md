@@ -80,3 +80,16 @@
 #### 相关
 
 [zrender.Element.hide](#zrenderelementhide)。
+
+
+
+### zrender.Element.traverse(cb, context)
+
+深度优先遍历所有子孙节点。
+
+#### 参数
+
+|属性|类型|默认值|描述|
+|---|---|---|---|
+|cb|`Function`||回调函数。|
+|context|`Object`||执行回调函数的上下文。|

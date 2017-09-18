@@ -3,7 +3,9 @@
 <div id="main">
     <div class="sidebar">
         <div class="sidebar-inner">
-            <h3>zrender</h3>
+            <h3>
+                <a href="#zrender-api">zrender</a>
+            </h3>
             <ol>
                 <li>
                     <a href="#zrenderdisposezr">dispose()</a>
@@ -21,8 +23,40 @@
                 <hr>
 
                 <li>
+                    <a href="#zrenderboundingrect">BoundingRect</a>
+                    <ol>
+                        <li>
+                            <a href="#zrenderboundingrectclone">clone()</a>
+                        </li>
+                        <li>
+                            <a href="#zrenderboundingrectcontainx-y">contain()</a>
+                        </li>
+                        <li>
+                            <a href="#zrenderboundingrectcopyother">copy()</a>
+                        </li>
+                        <li>
+                            <a href="#zrenderboundingrectintersectother">intersect()</a>
+                        </li>
+                        <li>
+                            <a href="#zrenderboundingrectunionother">union()</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
                     <a href="#zrenderdisplayable">Displayable</a>
                     <ol>
+                        <li>
+                            <a href="#zrenderdisplayablecontainx-y">contain()</a>
+                        </li>
+                        <li>
+                            <a href="#zrenderdisplayabledirty">dirty()</a>
+                        </li>
+                        <li>
+                            <a href="#zrenderdisplayablerectcontainx-y">rectContain()</a>
+                        </li>
+
+                        <hr>
+
                         <li>
                             <a href="#zrenderarc">Arc 圆弧</a>
                         </li>
@@ -31,6 +65,9 @@
                         </li>
                         <li>
                             <a href="#zrendercircle">Circle 圆形</a>
+                        </li>
+                        <li>
+                            <a href="#zrendercompoundpath">CompoundPath 复合路径</a>
                         </li>
                         <li>
                             <a href="#zrenderdroplet">Droplet 水滴</a>
@@ -49,6 +86,14 @@
                         </li>
                         <li>
                             <a href="#zrenderline">Line 折线段</a>
+                        </li>
+                        <li>
+                            <a href="#zrenderpath">Path 路径</a>
+                            <ol>
+                                <li>
+                                    <a href="#zrenderpathextendprops">Path.extend()</a>
+                                </li>
+                            </ol>
                         </li>
                         <li>
                             <a href="#zrenderpolygon">Polygon 多边形</a>
@@ -80,10 +125,10 @@
                     <a href="#zrenderelement">Element</a>
                     <ol>
                         <li>
-                            <a href="#zrenderelementhide">afterUpdate</a>
+                            <a href="#zrenderelementafterupdate">afterUpdate</a>
                         </li>
                         <li>
-                            <a href="#zrenderelementhide">beforeUpdate</a>
+                            <a href="#zrenderelementbeforeupdate">beforeUpdate</a>
                         </li>
                         <li>
                             <a href="#zrenderelementhide">hide()</a>
@@ -96,6 +141,17 @@
                         </li>
                         <li>
                             <a href="#zrenderelementshow">show()</a>
+                        </li>
+                        <li>
+                            <a href="#zrenderelementtraversecb-context">traverse()</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#zrendergradient">Gradient</a>
+                    <ol>
+                        <li>
+                            <a href="#zrendergradientaddcolorstopoffset-color">addColorStop()</a>
                         </li>
                     </ol>
                 </li>
@@ -138,14 +194,133 @@
                         <li>
                             <a href="#zrendergroupsilent">silent</a>
                         </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#zrenderlineargradient">LinearGradient</a>
+                </li>
+
+                <li>
+                    <a href="#zrendermatrix">matrix</a>
+                    <ol>
                         <li>
-                            <a href="#zrendergrouptraversecb-context">traverse()</a>
+                            <a href="#zrendermatrixcopyout-m">copy()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendermatrixcreate">create()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendermatrixidentityout">identity()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendermatrixinvertout-m">invert()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendermatrixmulout-m1-m2">mul()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendermatrixrotateout-m-rad">rotate()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendermatrixscaleout-m-v">scale()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendermatrixtranslateout-m-v">translate()</a>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <a href="#zrenderpattern">Pattern</a>
+                </li>
+                <li>
+                    <a href="#zrenderradialgradient">RadialGradient</a>
+                </li>
+
+                <li>
+                    <a href="#zrendervector">vector</a>
+                    <ol>
+                        <li>
+                            <a href="#zrendervectoraddout-v1-v2">add()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorapplytransformout-v-m">applyTransform()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorcopyout-v">copy()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorclonev">clone()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectordistv1-v2">dist()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectordistancev1-v2">distance()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectordistancesquarev1-v2">distanceSquare()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectordistsquarev1-v2">distSquare()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectordivout-v1-v2">div()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectordotv1-v2">dot()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorlenv">len()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorlengthv">length()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorlengthsquarev">lengthSquare()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorlensquarev">lenSquare()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorlerpout-v1-v2-t">lerp()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectormaxout-v1-v2">max()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorminout-v1-v2">min()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectormulout-v1-v2">mul()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectornegateout-v">negate()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectornormalizeout-v">normalize()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorscaleout-v-s">scale()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorscaleandaddout-v1-v2-scale">scaleAndAdd()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorsetout-a-b">set()</a>
+                        </li>
+                        <li>
+                            <a href="#zrendervectorsubout-v1-v2">sub()</a>
                         </li>
                     </ol>
                 </li>
             </ol>
 
-            <h3>zrender 实例</h3>
+            <hr>
+
+            <h3>
+                <a href="#zrender-instance-api">zrender 实例</a>
+            </h3>
             <ol>
                 <li>
                     <a href="#addel">add()</a>
@@ -223,12 +398,12 @@
     </div><!-- end of sidebar -->
 
     <div class="api-content">
-        <h2>zrender</h2>
+        <h2 id="zrender-api">zrender</h2>
         {% for api in site.api_zrender %}
             {{ api.content }}
         {% endfor %}
 
-        <h2>zrender 实例</h2>
+        <h2 id="zrender-instance-api">zrender 实例</h2>
         {% for api in site.api_zrender_instance %}
             {{ api.content }}
         {% endfor %}

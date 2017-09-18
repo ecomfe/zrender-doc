@@ -80,3 +80,61 @@
 |opts.zlevel|`number`|`0`|决定绘画在哪层 Canvas 中。Canvas 分层是一种常见的优化手段。我们可以把一些图形变化频繁（例如有动画）的组件设置成一个单独的 `zlevel`。需要注意的是过多的 Canvas 会引起内存开销的增大，在手机端上需要谨慎使用以防崩溃。`zlevel` 大的 Canvas 会放在 `zlevel` 小的 Canvas 的上面。|
 |opts.z|`number`|`0`|控制图形的前后顺序。`z` 值小的图形会被 `z` 值大的图形覆盖。`z` 相比 `zlevel` 优先级更低，而且不会创建新的 Canvas。|
 |opts.z2|`number`|`0`|与 `z` 类似，优先级比 `z` 更低。|
+
+
+
+### zrender.Displayable.contain(x, y)
+
+判断坐标 `(x, y)` 是否在图形上。
+
+#### 参数
+
+|属性|类型|默认值|描述|
+|---|---|---|---|
+|x|`number`||横坐标。|
+|y|`number`||纵坐标。|
+
+### 返回值
+
+返回是否在图形上，类型：`boolean`。
+
+#### 相关
+
+[zrender.Displayable.rectContain](#zrenderdisplayablerectcontainx-y)。
+
+
+
+### zrender.Displayable.dirty()
+
+设为需要更新。
+
+
+
+### zrender.Displayable.getBoundingRect()
+
+得到元素的包围盒。
+
+#### 返回值
+
+元素的包围盒，类型：[`zrender.BoundingRect`](#zrenderboundingrect)。
+
+
+
+### zrender.Displayable.rectContain(x, y)
+
+判断坐标 `(x, y)` 是否在图形上。
+
+#### 参数
+
+|属性|类型|默认值|描述|
+|---|---|---|---|
+|x|`number`||横坐标。|
+|y|`number`||纵坐标。|
+
+#### 返回值
+
+返回是否在图形上，类型：`boolean`。
+
+#### 相关
+
+[zrender.Displayable.contain]()
