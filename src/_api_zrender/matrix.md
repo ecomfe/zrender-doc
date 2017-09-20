@@ -17,7 +17,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||待修改的矩阵，由 [`zrender.matrix.create`](#zrendermatrixcreate) 创建。|
 |m|`Float32Array|number[]`||参考矩阵。|
@@ -44,7 +44,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||待修改的矩阵，由 [`zrender.matrix.create`](#zrendermatrixcreate) 创建。|
 
@@ -60,7 +60,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出矩阵，由 [`zrender.matrix.create`](#zrendermatrixcreate) 创建。|
 |m|`Float32Array|number[]`||待求逆的矩阵，不会在改方法中被改变。|
@@ -77,7 +77,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出矩阵，由 [`zrender.matrix.create`](#zrendermatrixcreate) 创建。|
 |m1|`Float32Array|number[]`||待相乘的矩阵。|
@@ -95,7 +95,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出矩阵，由 [`zrender.matrix.create`](#zrendermatrixcreate) 创建。|
 |m|`Float32Array|number[]`||待修改的矩阵，不会在改方法中被改变。|
@@ -113,7 +113,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出矩阵，由 [`zrender.matrix.create`](#zrendermatrixcreate) 创建。|
 |m|`Float32Array|number[]`||待修改的矩阵，不会在改方法中被改变。|
@@ -131,7 +131,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出矩阵，由 [`zrender.matrix.create`](#zrendermatrixcreate) 创建。|
 |m|`Float32Array|number[]`||待修改的矩阵，不会在改方法中被改变。|

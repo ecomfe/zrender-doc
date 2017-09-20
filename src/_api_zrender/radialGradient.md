@@ -11,7 +11,7 @@
 
 `zrender.RadialGradient(x, y, r, colorStops, globalCoord)`
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |x|`number`|`0.5`|渐变中心位置横坐标。|
 |y|`number`|`0.5`|渐变中心位置纵坐标。|

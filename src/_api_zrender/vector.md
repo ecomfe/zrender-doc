@@ -17,7 +17,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v1|`Float32Array|number[]`||第一个向量。|
@@ -29,7 +29,7 @@
 
 #### 相关
 
-[zrender.vector.scaleAndAdd]()。
+[zrender.vector.scaleAndAdd](#zrendervectorscaleandaddout-v1-v2-scale)。
 
 
 
@@ -39,7 +39,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v|`Float32Array|number[]`||向量。|
@@ -57,7 +57,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||待修改的向量。|
 |v|`Float32Array|number[]`||参考向量。|
@@ -90,7 +90,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |v1|`Float32Array|number[]`||第一个向量。|
 |v2|`Float32Array|number[]`||第二个向量。|
@@ -107,7 +107,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |v1|`Float32Array|number[]`||第一个向量。|
 |v2|`Float32Array|number[]`||第二个向量。|
@@ -130,7 +130,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v1|`Float32Array|number[]`||第一个向量。|
@@ -148,7 +148,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |v1|`Float32Array|number[]`||第一个向量。|
 |v2|`Float32Array|number[]`||第二个向量。|
@@ -165,7 +165,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |v|`Float32Array|number[]`||待求模长的向量，不会在该方法中被改变。|
 
@@ -193,7 +193,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |v|`Float32Array|number[]`||待求模长平方的向量，不会在该方法中被改变。|
 
@@ -209,7 +209,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v1|`Float32Array|number[]`||第一个向量。|
@@ -228,7 +228,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v1|`Float32Array|number[]`||第一个向量。|
@@ -240,7 +240,7 @@
 
 #### 相关
 
-[zrender.vector.min]()。
+[zrender.vector.min](#zrendervectorminout-v1-v2)。
 
 
 
@@ -250,7 +250,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v1|`Float32Array|number[]`||第一个向量。|
@@ -268,7 +268,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v1|`Float32Array|number[]`||第一个向量。|
@@ -286,7 +286,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v|`Float32Array|number[]`||输入向量。|
@@ -303,7 +303,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v|`Float32Array|number[]`||输入向量。|
@@ -320,7 +320,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v|`Float32Array|number[]`||待修改的向量，不会在改方法中被改变。|
@@ -332,7 +332,7 @@
 
 #### 相关
 
-[zrender.vector.scaleAndAdd]()。
+[zrender.vector.scaleAndAdd](#zrendervectorscaleandaddout-v1-v2-scale)。
 
 
 
@@ -342,7 +342,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v1|`Float32Array|number[]`||第一个向量。|
@@ -355,7 +355,7 @@
 
 #### 相关
 
-[zrender.vector.add]()、[zrender.vector.scale]()。
+[zrender.vector.add](#zrendervectoraddout-v1-v2)、[zrender.vector.scale](#zrendervectorscaleout-v-s)。
 
 
 
@@ -365,7 +365,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||待修改的向量。|
 |a|`number`||向量的第一个维度。|
@@ -383,7 +383,7 @@
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |out|`Float32Array|number[]`||输出向量。|
 |v1|`Float32Array|number[]`||第一个向量。|

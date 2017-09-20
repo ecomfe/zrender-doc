@@ -11,7 +11,7 @@
 
 `zrender.Image(opts)`
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |opts|`Object`||配置项，继承得到的配置项参见 [zrender.Displayable](#zrenderdisplayable)。|
 |opts.position|`number[]`|`[0, 0]`|图像内容相对于这个图像元素的坐标。|

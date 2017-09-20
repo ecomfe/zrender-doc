@@ -11,7 +11,7 @@
 
 `zrender.LinearGradient(x, y, x2, y2, colorStops, globalCoord)`
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |x|`number`|`0`|渐变起始位置横坐标。|
 |y|`number`|`0`|渐变起始位置纵坐标。|

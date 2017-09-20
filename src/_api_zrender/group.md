@@ -35,7 +35,7 @@ zr.add(g);
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |child|[`Element`](#zrenderelement)||待添加的元素。|
 
@@ -56,7 +56,7 @@ zr.add(g);
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |child|[`Element`](#zrenderelement)||待添加的元素。|
 |nextSibling|[`Element`](#zrenderelement)||已经在 Group 中的元素。|
@@ -119,7 +119,7 @@ zr.add(g);
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |cb|`Function`||回调函数。|
 |context|`Object`||执行回调函数的上下文。|
@@ -132,7 +132,7 @@ zr.add(g);
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |includeChildren|[`zrender.Element[]`](#zrenderelement)||组内元素的子集。如果 `includeChildren` 未设置，则获取所有元素的包围盒，否则获得 `includeChildren` 的包围盒。|
 
@@ -148,7 +148,7 @@ zr.add(g);
 
 #### 参数
 
-|属性|类型|默认值|描述|
+|名称|类型|默认值|描述|
 |---|---|---|---|
 |child|[`zrender.Element`](#zrenderelement)||待移除的元素。|
 
