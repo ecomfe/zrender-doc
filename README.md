@@ -7,8 +7,11 @@ For the first time:
 ```
 npm i
 npm i -g gulp
-npm i -g jekyll
+cd src
+bundle install
 ```
+
+> If you have problem installing Jekyll, please refer to [Jekyll's official site](https://jekyllrb.com/docs/installation/).
 
 Watch asset files (css, js, ...) changes:
 

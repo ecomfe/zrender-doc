@@ -9,27 +9,6 @@
 
 
 
-### zrender.color.fastMapToColor(normalizedValue, colors, out)
-
-快速得到渐变色 `colors` 在 `normalizedValue` 位置的颜色，得到混合后的颜色 `out`。该方法比 [zrender.color.mapToColor]() 快，因为其参数 `colors` 是数组形式，少了从 `string` 变成 `number[]` 的操作。
-
-#### 参数
-
-|名称|类型|默认值|描述|
-|normalizedValue|`number`||位置，范围 `0` 到 `1`。|
-|colors|`number[][]`||渐变色的数组，每一个元素是一个 `rgba` 的数组。|
-|out|`number[]`||输出的 `rgba` 颜色。|
-
-#### 返回值
-
-如果渐变色不合法，则返回 `undefined`，如果合法，则返回 `out`。类型：`undefiend|number[]`。
-
-#### 相关
-
-[zrender.color.mapToColor](#zrendercolormaptocolornormalizedvalue-colors-fulloutput)。
-
-
-
 ### zrender.color.lift(color, level)
 
 提亮颜色。
@@ -46,7 +25,7 @@
 
 
 
-### zrender.color.mapToColor(normalizedValue, colors, fullOutput)
+### zrender.color.lerp(normalizedValue, colors, fullOutput)
 
 快速得到渐变色 `colors` 在 `normalizedValue` 位置的颜色，返回混合后的颜色。
 
@@ -60,10 +39,6 @@
 #### 返回值
 
 如果 `fullOutput` 为 `true`，则返回包含 `color`、 `leftIndex`、 `rightIndex`、 `value` 的 `Object`，否则返回颜色。类型：`Object|string`。
-
-#### 相关
-
-[zrender.color.fastMapToColor](#zrendercolorfastmaptocolornormalizedvalue-colors-out)。
 
 
 

@@ -122,7 +122,7 @@
 
 ### zrender.Displayable.rectContain(x, y)
 
-判断坐标 `(x, y)` 是否在图形上。
+判断坐标 `(x, y)` 是否在图形包围盒内。
 
 #### 参数
 

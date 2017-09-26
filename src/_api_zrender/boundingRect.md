@@ -59,7 +59,7 @@
 
 ### zrender.BoundingRect.intersect(other)
 
-与另一个包围盒求交集，得到的也是一个包围盒。
+判断两个包围盒是否相交。
 
 #### 参数
 
@@ -69,7 +69,7 @@
 
 #### 返回值
 
-新的包围盒，类型：[`zrender.BoundingRect`](#zrenderboundingrect)。
+相交部分的包围盒，类型：[`zrender.BoundingRect`](#zrenderboundingrect)。
 
 
 
