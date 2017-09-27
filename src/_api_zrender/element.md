@@ -91,5 +91,5 @@
 
 |名称|类型|默认值|描述|
 |---|---|---|---|
-|cb|`Function`||回调函数。|
+|cb|`Function`||回调函数。接受参数：`context, child`，其中 `child` 是每个元素的子元素。|
 |context|`Object`||执行回调函数的上下文。|
