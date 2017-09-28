@@ -78,12 +78,6 @@
 
 
 
-### zrender.vector.dist(v1, v2)
-
-同 [zrender.vector.distance](#zrendervectordistancesquarev1-v2)。
-
-
-
 ### zrender.vector.distance(v1, v2)
 
 得到向量 `v1` 与 `v2` 间距离。
@@ -115,12 +109,6 @@
 #### 返回值
 
 距离的平方，类型：`number`。
-
-
-
-### zrender.vector.distSquare(v1, v2)
-
-同 [zrender.vector.distanceSquare](#zrendervectordistancesquarev1-v2)。
 
 
 
