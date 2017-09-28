@@ -1,0 +1,55 @@
+.api-content {
+    @extend .content;
+
+    padding: 0 40px 20px 40px;
+    max-width: 1000px;
+    color: $clr-text;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-top: 80px;
+        margin-bottom: 0;
+        padding-top: 20px;
+        border-top: 1px solid $clr-border;
+
+        &:first-child {
+            margin-top: 5px;
+            border-top: none;
+        }
+
+        &+h3 {
+            margin-top: 25px;
+        }
+    }
+
+    h3 {
+        margin-top: 50px;
+        color: $clr-link;
+
+        &:hover .api-anchor {
+            display: inline-block;
+        }
+    }
+
+        .api-anchor {
+            display: none;
+            margin-left: 5px;
+        }
+
+    h4 {
+        display: list-item;
+        margin: 20px 0 10px 0;
+
+        font-size: 16px;
+        color: $clr-secondary;
+        list-style: disc;
+    }
+
+    table {
+        font-size: 1.4rem;
+    }
+
+        th {
+            min-width: 60px;
+        }
+}

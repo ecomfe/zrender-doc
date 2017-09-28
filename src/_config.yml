@@ -18,6 +18,8 @@ description: > # this means to ignore newlines until "baseurl:"
   ZRender Documentation and API
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://localhost/zrender-doc/dist" # the base hostname & protocol for your site, e.g. http://example.com
+zrender_url: "http://localhost/zrender/dist/zrender.js"
+source_url: "https://raw.githubusercontent.com/ecomfe/zrender-doc/master/src"
 
 # Build settings
 markdown: kramdown
@@ -33,5 +35,9 @@ sass:
 destination: ../dist
 
 collections:
-    - api_zrender
-    - api_zrender_instance
+  examples:
+    output: true
+  api_zrender:
+    output: false
+  api_zrender_instance:
+    output: false

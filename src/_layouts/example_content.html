@@ -1,0 +1,17 @@
+{% include header.html %}
+
+<div id="main">
+    {% include example_sidebar.html %}
+
+    <div class="content">
+        {{ content }}
+        <a class="source-link" target="_blank"
+            href="{{ site.source_url }}/{{ page.path }}">
+            View Source
+        </a>
+    </div>
+</div>
+
+<script src="{{ site.zrender_url }}"></script>
+
+{% include footer.html %}

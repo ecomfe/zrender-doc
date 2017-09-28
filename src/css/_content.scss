@@ -1,0 +1,17 @@
+#main {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    padding-top: 50px;
+    height: 100%;
+}
+
+.content {
+    position: relative;
+
+    margin-left: $sidebar-width;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}

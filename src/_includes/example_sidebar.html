@@ -1,0 +1,20 @@
+<div class="sidebar">
+    <div class="sidebar-inner">
+        <h3>
+            <a href="{{ site.url }}/examples.html">Examples</a>
+        </h3>
+        <ol>
+            {% for example in site.examples %}
+            <li>
+                <a href="{{ site.url }}{{ example.url }}"
+                    {% if page.url == example.url %}
+                        class="active"
+                    {% endif %}
+                >
+                    {{ example.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>
