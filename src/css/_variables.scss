@@ -1,7 +1,14 @@
-$clr-primary:        #34A8D7;
-$clr-secondary:      #227AA1;
-$clr-dark:           #2F2933;
+$clr-primary:        #A06D20;
+$clr-secondary:      #5588E2;
 
-$clr-link: $clr-primary;
-$clr-text: #555;
-$clr-border: #eee;
+$clr-link: $clr-secondary;
+$clr-link-hover: darken($clr-link, 20%);
+
+$clr-text: #999;
+$clr-text-dark: #808080;
+$clr-head: #494949;
+$clr-head-light: #757575;
+$clr-border: #DBDBDB;
+
+$clr-bg: rgba(216, 216, 216, 0.1);
+$clr-bg-primary: rgba(160, 109, 32, 0.08);

@@ -13,6 +13,8 @@
 >
 > `zrender.Displayable` 是一个抽象类，所以不要在代码中 `new zrender.Displayable(opts)`，这里的构造函数只是用于表明其子类（如 [Rect](#zrenderrect) 等）构造函数参数的共同部分。
 
+元素初始化之后，需要通过 [zrender.Element.attr](#zrenderelementattrkey-value) 修改属性。
+
 #### 构造函数
 
 `zrender.Displayable(opts)`

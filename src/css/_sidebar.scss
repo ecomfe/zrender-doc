@@ -1,4 +1,4 @@
-$sidebar-width: 260px;
+$sidebar-width: 240px;
 
 .sidebar {
     position: fixed;
@@ -9,15 +9,21 @@ $sidebar-width: 260px;
 
     overflow-x: hidden;
     overflow-y: auto;
+    border-right: 1px solid $clr-border;
 }
 
     .sidebar-inner {
         width: $sidebar-width;
-        padding: 10px 20px;
+        padding: 10px 0;
 
         h3 {
+            margin: 10px 0 0 0;
             font-size: 1.6rem;
-            margin: 20px 0 10px 0;
+
+            a {
+                padding: 10px 30px;
+                color: $clr-head;
+            }
         }
 
         h4 {
@@ -27,31 +33,54 @@ $sidebar-width: 260px;
         ol {
             padding-left: 0;
 
-            ol {
-                padding-left: 20px;
+            ol a {
+                padding-left: 50px;
+            }
+
+            ol ol a {
+                padding-left: 70px;
             }
         }
 
             li {
-                padding: 3px 0;
                 list-style: none;
 
-                li {
-                    padding: 2px 0;
+                a {
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                }
+
+                li a {
+                    padding-top: 2px;
+                    padding-bottom: 2px;
                 }
             }
 
         a {
+            display: inline-block;
+            width: 100%;
             color: $clr-text;
-            transition-duration: 0.2s;
+            padding-left: 30px;
+            transition-property: color, background;
 
-            &:hover, &.active {
+            &:hover {
+                margin-right: -2px;
+                color: $clr-head;
                 text-decoration: none;
-                color: $clr-link;
+                background: $clr-bg-primary;
+                border-right: 2px solid $clr-primary;
+            }
+
+            &.active {
+                color: $clr-primary;
             }
         }
 
         hr {
             margin: 5px 0;
+        }
+
+        .primary {
+            color: $clr-head;
         }
     }

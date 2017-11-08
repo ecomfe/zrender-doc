@@ -1,10 +1,45 @@
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="{{ site.url }}/lib/css/bootstrap.min.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
         <link rel="stylesheet" href="{{ site.url }}/css/main.css">
     </head>
 
     <body>
-        <div id="nav"></div>
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="{{ site.url }}/" class="navbar-logo">
+                            <div class="navbar-logo-text">ZRender</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li {% if page.url == "/" %}class="active"{% endif %}>
+                        <a href="{{ site.url }}/">首页</a>
+                    </li>
+                    <li {% if page.url == "/api.html" %}class="active"{% endif %}>
+                        <a href="{{ site.url }}/api.html">文档</a>
+                    </li>
+                    <li {% if page.url == "/examples.html" %}class="active"{% endif %}>
+                        <a href="{{ site.url }}/examples.html">实例</a>
+                    </li>
+                    <li>
+                        <a href="http://echarts.baidu.com/">ECharts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>

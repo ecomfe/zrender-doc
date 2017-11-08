@@ -1,11 +1,22 @@
 {% include header.html %}
 
-<div id="main">
+<div class="page">
     {% include example_sidebar.html %}
 
     <div class="content">
-        <h2>Examples</h2>
-        <p>(List of example images...)</p>
+        <div class="container">
+            <h2>Examples</h2>
+
+            <div class="row examples">
+                {% for example in site.examples %}
+                <div class="col-md-3 col-sm-6">
+                    <a href="{{ site.url }}{{ example.url }}">
+                        <img src="{{ site.url }}/img/examples/{{ example.name }}.png" alt="{{ example.title }}">
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
 

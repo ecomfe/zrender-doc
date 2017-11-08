@@ -1,5 +1,6 @@
 ---
 title: 'Particles'
+name: 'particles'
 layout: 'example_content'
 ---
 

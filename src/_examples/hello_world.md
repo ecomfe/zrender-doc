@@ -1,5 +1,6 @@
 ---
 title: 'Hello World!'
+name: 'hello_world'
 layout: 'example_content'
 ---
 

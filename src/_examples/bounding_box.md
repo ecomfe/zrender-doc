@@ -1,5 +1,6 @@
 ---
 title: 'Bounding Box'
+name: 'bounding_box'
 layout: 'example_content'
 ---
 

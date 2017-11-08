@@ -1,4 +1,17 @@
         <script src="{{ site.url }}/lib/js/jquery.min.js"></script>
         <script src="{{ site.url }}/lib/js/bootstrap.min.js"></script>
+
+        <script>
+            $(window).scroll(function () {
+                if ($(window).scrollTop() === 0) {
+                    // Is top
+                    $('#nav').removeClass('shadowed');
+                }
+                else {
+                    // Is not top
+                    $('#nav').addClass('shadowed');
+                }
+            });
+        </script>
     </body>
 </html>

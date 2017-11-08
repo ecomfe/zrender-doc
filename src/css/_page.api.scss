@@ -6,50 +6,38 @@
     color: $clr-text;
 
     h2 {
-        font-size: 2.5rem;
-        margin-top: 80px;
-        margin-bottom: 0;
-        padding-top: 20px;
+        font-size: 26px;
+        color: $clr-head;
         border-top: 1px solid $clr-border;
+        padding-top: 20px;
 
         &:first-child {
-            margin-top: 5px;
             border-top: none;
-        }
-
-        &+h3 {
-            margin-top: 25px;
+            padding-top: 0;
+            margin-top: 30px;
         }
     }
 
-    h3 {
-        margin-top: 50px;
-        color: $clr-link;
-
-        &:hover .api-anchor {
-            display: inline-block;
-        }
+    .api-anchor {
+        display: none;
+        transition-duration: 0.5s;
+        margin-left: 5px;
+        color: $clr-primary;
     }
 
-        .api-anchor {
-            display: none;
-            margin-left: 5px;
-        }
-
-    h4 {
-        display: list-item;
-        margin: 20px 0 10px 0;
-
-        font-size: 16px;
-        color: $clr-secondary;
-        list-style: disc;
+    h3:hover .api-anchor {
+        display: inline-block;
     }
 
     table {
-        font-size: 1.4rem;
+        font-size: 14px;
     }
 
         th {
             min-width: 60px;
+        }
+
+        td {
+            color: $clr-text;
         }
 }

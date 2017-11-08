@@ -25,6 +25,33 @@
 
 
 
+### zrender.Element.attr(key, value)
+
+设置元素属性。需要注意的是，应该始终调用该方法来修改属性，而不是直接 `element.xxx = ...` 这样的形式，因为后者不会重绘物体。
+
+#### 参数
+
+|名称|类型|默认值|描述|
+|---|---|---|---|
+| key | `string|Object` | | 设置的属性。可以是 `string` 类型的属性名称，或者 `Object` 类型的属性及其值。 |
+| value | `*` || 属性值。|
+
+#### 例子
+
+```js
+element.attr('position', [100, 200]);
+element.attr({
+    style: {
+        fill: 'red'
+    },
+    shape: {
+        x: 100
+    }
+});
+```
+
+
+
 ### zrender.Element.beforeUpdate
 
 类型：`Function`，元素更新前的回调函数。
