@@ -1,0 +1,204 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="http://localhost/zrender-doc/public/lib/css/bootstrap.min.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="http://localhost/zrender-doc/public/css/main.css">
+    </head>
+
+    <body>
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="http://localhost/zrender-doc/public/" class="navbar-logo">
+                            <div class="navbar-logo-text">ZRender</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a href="http://localhost/zrender-doc/public/">首页</a>
+                    </li>
+                    <li >
+                        <a href="http://localhost/zrender-doc/public/api.html">文档</a>
+                    </li>
+                    <li >
+                        <a href="http://localhost/zrender-doc/public/examples.html">实例</a>
+                    </li>
+                    <li>
+                        <a href="http://echarts.baidu.com/">ECharts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+<div id="main">
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <h3>
+            <a href="http://localhost/zrender-doc/public/examples.html">Examples</a>
+        </h3>
+        <ol>
+            
+            <li>
+                <a href="http://localhost/zrender-doc/public/examples/animation.html"
+                    
+                >
+                    Animation
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://localhost/zrender-doc/public/examples/bounding_box.html"
+                    
+                        class="active"
+                    
+                >
+                    Bounding Box
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://localhost/zrender-doc/public/examples/clip_path.html"
+                    
+                >
+                    ClipPath
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://localhost/zrender-doc/public/examples/hello_world.html"
+                    
+                >
+                    Hello World!
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://localhost/zrender-doc/public/examples/particles.html"
+                    
+                >
+                    Particles
+                </a>
+            </li>
+            
+        </ol>
+    </div>
+</div>
+
+
+    <div class="content">
+        <div class="example-container"></div>
+
+<script>
+window.onload = function() {
+    var container = document.getElementsByClassName('example-container')[0];
+    var zr = zrender.init(container);
+
+    var w = zr.getWidth();
+    var h = zr.getHeight();
+
+    var isMouseDown = false;
+    zr.on('mousedown', function () {
+        isMouseDown = true;
+    });
+    zr.on('mouseup', function () {
+        isMouseDown = false;
+    });
+
+    var elementStyle = {
+        stroke: '#ccc',
+        fill: 'white'
+    };
+
+    var group = new zrender.Group();
+    for (var i = 0; i < 10; ++i) {
+        var r = 50 * Math.random() + 20;
+        var circle = new zrender.Circle({
+            shape: {
+                cx: 0,
+                cy: 0,
+                r: r
+            },
+            position: [
+                (w * 0.6 - r * 2) * Math.random() + r + w * 0.2,
+                (h * 0.6 - r * 2) * Math.random() + r + h * 0.2
+            ],
+            style: elementStyle,
+            draggable: true
+        })
+        .on('mousemove', function () {
+            if (isMouseDown) {
+                var rect = group.getBoundingRect();
+                boundingRect.setShape({
+                    x: rect.x,
+                    y: rect.y,
+                    width: rect.width,
+                    height: rect.height
+                });
+            }
+        });
+        group.add(circle);
+    }
+    zr.add(group);
+
+    var rect = group.getBoundingRect();
+    var boundingRect = new zrender.Rect({
+        shape: {
+            cx: 0,
+            cy: 0,
+            x: rect.x,
+            y: rect.y,
+            width: rect.width,
+            height: rect.height
+        },
+        style: {
+            fill: 'none',
+            stroke: '#14f1ff'
+        }
+    });
+    zr.add(boundingRect);
+}
+</script>
+
+
+        <a class="source-link" target="_blank"
+            href="https://raw.githubusercontent.com/ecomfe/zrender-doc/master/src/_examples/bounding_box.md">
+            View Source
+        </a>
+    </div>
+</div>
+
+<script src="http://localhost/zrender-doc/public/lib/js/zrender-3.7.0.min.js"></script>
+
+        <script src="http://localhost/zrender-doc/public/lib/js/jquery.min.js"></script>
+        <script src="http://localhost/zrender-doc/public/lib/js/bootstrap.min.js"></script>
+
+        <script>
+            $(window).scroll(function () {
+                if ($(window).scrollTop() === 0) {
+                    // Is top
+                    $('#nav').removeClass('shadowed');
+                }
+                else {
+                    // Is not top
+                    $('#nav').addClass('shadowed');
+                }
+            });
+        </script>
+    </body>
+</html>
+

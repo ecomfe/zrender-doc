@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="http://localhost/zrender-doc/public/lib/css/bootstrap.min.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="http://localhost/zrender-doc/public/css/main.css">
+    </head>
+
+    <body>
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="http://localhost/zrender-doc/public/" class="navbar-logo">
+                            <div class="navbar-logo-text">ZRender</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a href="http://localhost/zrender-doc/public/">首页</a>
+                    </li>
+                    <li >
+                        <a href="http://localhost/zrender-doc/public/api.html">文档</a>
+                    </li>
+                    <li >
+                        <a href="http://localhost/zrender-doc/public/examples.html">实例</a>
+                    </li>
+                    <li>
+                        <a href="http://echarts.baidu.com/">ECharts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+<div id="main">
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <h3>
+            <a href="http://localhost/zrender-doc/public/examples.html">Examples</a>
+        </h3>
+        <ol>
+            
+            <li>
+                <a href="http://localhost/zrender-doc/public/examples/animation.html"
+                    
+                >
+                    Animation
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://localhost/zrender-doc/public/examples/bounding_box.html"
+                    
+                >
+                    Bounding Box
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://localhost/zrender-doc/public/examples/clip_path.html"
+                    
+                >
+                    ClipPath
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://localhost/zrender-doc/public/examples/hello_world.html"
+                    
+                >
+                    Hello World!
+                </a>
+            </li>
+            
+            <li>
+                <a href="http://localhost/zrender-doc/public/examples/particles.html"
+                    
+                        class="active"
+                    
+                >
+                    Particles
+                </a>
+            </li>
+            
+        </ol>
+    </div>
+</div>
+
+
+    <div class="content">
+        <div class="example-container"></div>
+
+<script src="http://localhost/zrender-doc/public/lib/js/stats.min.js"></script>
+
+<script>
+window.onload = function() {
+    var container = document.getElementsByClassName('example-container')[0];
+    var zr = zrender.init(container);
+
+    var w = zr.getWidth();
+    var h = zr.getHeight();
+
+    var stats = new Stats();
+    document.getElementsByClassName('example-container')[0]
+        .appendChild(stats.dom);
+    stats.dom.style.position = 'absolute';
+    stats.dom.style.left = '10px';
+    stats.dom.style.top = '10px';
+
+    zr.animation.on('frame', function () {
+        stats.begin();
+        stats.end();
+    });
+
+    var spray = function(x, y) {
+        var cnt = 200;
+        var centerTolerance = 0;
+        var radius = 10;
+        var particles = [];
+        var duration = 3000;
+        var color = Math.random() * 260;
+        var maxVx = 1000 + Math.random() * 1500;
+        var maxVy = 1000 + Math.random() * 1500;
+
+        for (var i = 0; i < cnt; ++i) {
+            (function () {
+                var x0 = x + centerTolerance * (Math.random() - 1);
+                var y0 = y + centerTolerance * (Math.random() - 1);
+                var opacity = Math.random() * 0.5 + 0.5;
+
+                var particle = new zrender.Circle({
+                    shape: {
+                        cx: 0,
+                        cy: 0,
+                        r: radius * (0.5 + 0.5 * Math.random())
+                    },
+                    style: {
+                        fill: 'hsl(' + Math.floor(color + Math.random() * 100)
+                            + ', 80%, '
+                            + Math.floor(Math.random() * 40 + 40) + '%)',
+                        opacity: opacity
+                    },
+                    position: [x0, y0]
+                });
+                zr.add(particle);
+                particles.push(particle);
+
+                particle._t = 0;
+                particle._opacity = opacity;
+
+                var animator = particle.animate('');
+                var vx = (Math.random() - 0.5) * maxVx;
+                var vy = (Math.random() - 1.2) * maxVy;
+                var ay = 8000;
+                var t0 = 0;
+
+                animator
+                    .when(duration, {
+                        _t: 1
+                    })
+                    .during(function (p, _t) {
+                        var dt = _t - t0;
+                        var x1 = p.position[0] + vx * dt;
+                        var y1 = p.position[1] + vy * dt;
+
+                        p.position = [x1, y1];
+                        p.setStyle({
+                            opacity: p._opacity * (1 - _t)
+                        });
+
+                        vy = vy + ay * dt;
+                        t0 = _t;
+                    })
+                    .done(function () {
+                        zr.remove(particle);
+                    })
+                    .start();
+            })();
+        }
+    };
+
+    spray(w / 2, h / 2);
+    setInterval(function () {
+        spray(w * Math.random(), h * Math.random());
+    }, 1000);
+};
+</script>
+
+
+        <a class="source-link" target="_blank"
+            href="https://raw.githubusercontent.com/ecomfe/zrender-doc/master/src/_examples/particles.md">
+            View Source
+        </a>
+    </div>
+</div>
+
+<script src="http://localhost/zrender-doc/public/lib/js/zrender-3.7.0.min.js"></script>
+
+        <script src="http://localhost/zrender-doc/public/lib/js/jquery.min.js"></script>
+        <script src="http://localhost/zrender-doc/public/lib/js/bootstrap.min.js"></script>
+
+        <script>
+            $(window).scroll(function () {
+                if ($(window).scrollTop() === 0) {
+                    // Is top
+                    $('#nav').removeClass('shadowed');
+                }
+                else {
+                    // Is not top
+                    $('#nav').addClass('shadowed');
+                }
+            });
+        </script>
+    </body>
+</html>
+

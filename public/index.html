@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="http://localhost/zrender-doc/public/lib/css/bootstrap.min.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="http://localhost/zrender-doc/public/css/main.css">
+    </head>
+
+    <body>
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="http://localhost/zrender-doc/public/" class="navbar-logo">
+                            <div class="navbar-logo-text">ZRender</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="http://localhost/zrender-doc/public/">首页</a>
+                    </li>
+                    <li >
+                        <a href="http://localhost/zrender-doc/public/api.html">文档</a>
+                    </li>
+                    <li >
+                        <a href="http://localhost/zrender-doc/public/examples.html">实例</a>
+                    </li>
+                    <li>
+                        <a href="http://echarts.baidu.com/">ECharts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+<title>开始使用 ZRender</title>
+
+<div class="container container-top">
+    <h1>开始使用 ZRender</h1>
+    <p>ZRender 是二维绘图引擎，它提供 Canvas、SVG、VML 等多种渲染方式。ZRender 也是 <a href="http://echarts.baidu.com/">ECharts</a> 的渲染器。</p>
+
+<p>ZRender 官网正在开发中，为了让大家尽早可以使用，我们先开放了<a href="http://localhost/zrender-doc/public/api.html">文档</a>和这篇教程，希望对大家有帮助。</p>
+
+<h2 id="下载-zrender">下载 ZRender</h2>
+
+<p>ZRender 项目在 GitHub 上的地址是：<a href="https://github.com/ecomfe/zrender">https://github.com/ecomfe/zrender</a>。也可以使用 <code class="highlighter-rouge">npm install zrender</code> 下载。</p>
+
+<p>在 <code class="highlighter-rouge">dist</code> 目录下找到 <code class="highlighter-rouge">zrender.js</code> 和 <code class="highlighter-rouge">zrender.min.js</code>，前者是开发版，后者是发布版。</p>
+
+<h2 id="引入-zrender">引入 ZRender</h2>
+
+<p>在使用 ZRender 前，需要在 HTML 中加载对应 JavaScript 文件：</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"./dist/zrender.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="初始化-zrender">初始化 ZRender</h2>
+
+<p>在使用 ZRender 前需要初始化实例，具体方式是传入一个 DOM 容器：</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">zr</span> <span class="o">=</span> <span class="nx">zrender</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'main'</span><span class="p">));</span>
+</code></pre>
+</div>
+
+<p>创建出的这个实例对应文档中 <a href="http://localhost/zrender-doc/public/api.html#zrender-instance-api">zrender 实例</a>部分的方法和属性。</p>
+
+<h2 id="在场景中添加元素">在场景中添加元素</h2>
+
+<p>ZRender 提供了将近 20 种图形类型，可以在文档 <a href="http://localhost/zrender-doc/public/api.html#zrenderdisplayable">zrender.Displayable</a> 下找到。如果想创建其他图形，也可以通过 <a href="http://localhost/zrender-doc/public/api.html#zrenderpathextendprops">zrender.Path.extend</a> 进行扩展。</p>
+
+<p>以创建一个圆为例：</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">circle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">zrender</span><span class="p">.</span><span class="nx">Circle</span><span class="p">({</span>
+    <span class="na">shape</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">cx</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+        <span class="na">cy</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="na">r</span><span class="p">:</span> <span class="mi">40</span>
+    <span class="p">},</span>
+    <span class="na">style</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">fill</span><span class="p">:</span> <span class="s1">'none'</span><span class="p">,</span>
+        <span class="na">stroke</span><span class="p">:</span> <span class="s1">'#F00'</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">zr</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">circle</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>创建了一个圆心在 <code class="highlighter-rouge">[150, 50]</code> 位置，半径为 <code class="highlighter-rouge">40</code> 像素的圆，并将其添加到画布中。</p>
+
+<p>请参考<a href="http://localhost/zrender-doc/public/api.html">文档</a>了解更多。</p>
+
+</div>
+
+        <script src="http://localhost/zrender-doc/public/lib/js/jquery.min.js"></script>
+        <script src="http://localhost/zrender-doc/public/lib/js/bootstrap.min.js"></script>
+
+        <script>
+            $(window).scroll(function () {
+                if ($(window).scrollTop() === 0) {
+                    // Is top
+                    $('#nav').removeClass('shadowed');
+                }
+                else {
+                    // Is not top
+                    $('#nav').addClass('shadowed');
+                }
+            });
+        </script>
+    </body>
+</html>
+
