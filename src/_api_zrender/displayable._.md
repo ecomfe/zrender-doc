@@ -34,6 +34,7 @@
 |opts.style.lineDash|`number[]`|`null`|描边虚线样式，参考 [SVG stroke-dasharray](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray)。|
 |opts.style.lineDashOffset|`number`|`null`|描边虚线偏移，参考 [SVG stroke-dashoffset](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset)。|
 |opts.style.shadowBlur|`number`|`0`|阴影模糊大小。|
+|opts.style.shadowColor|`string`|`'transparent'`|阴影颜色。|
 |opts.style.shadowOffsetX|`number`|`0`|阴影横向偏移。|
 |opts.style.shadowOffsetY|`number`|`0`|阴影纵向偏移。|
 |opts.style.lineWidth|`number`|`0`|线宽。|
