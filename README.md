@@ -23,5 +23,5 @@ Open another terminal window and:
 
 ```
 cd src
-jekyll b   # build documentation to dist
+jekyll b --config _config_release.yml   # build documentation to dist
 ```
