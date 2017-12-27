@@ -5,7 +5,8 @@ gulp.task('copy-lib-js', function () {
         .src([
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/stats.js/build/stats.min.js'
+            'node_modules/stats.js/build/stats.min.js',
+            'node_modules/zrender/dist/zrender.min.js'
         ])
         .pipe(gulp.dest('src/lib/js'));
 });
