@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Particles</title>
+        <title>Glitched Text</title>
 
         <link rel="stylesheet" href="http://localhost/zrender-doc/public/lib/css/bootstrap.min.css">
 
@@ -82,6 +82,8 @@
             <li>
                 <a href="http://localhost/zrender-doc/public/examples/glitched_text.html"
                     
+                        class="active"
+                    
                 >
                     Glitched Text
                 </a>
@@ -98,8 +100,6 @@
             <li>
                 <a href="http://localhost/zrender-doc/public/examples/particles.html"
                     
-                        class="active"
-                    
                 >
                     Particles
                 </a>
@@ -111,9 +111,7 @@
 
 
     <div class="content">
-        <div class="example-container"></div>
-
-<script src="http://localhost/zrender-doc/public/lib/js/stats.min.js"></script>
+        <div class="example-container" style="background: #333"></div>
 
 <script>
 window.onload = function() {
@@ -123,95 +121,89 @@ window.onload = function() {
     var w = zr.getWidth();
     var h = zr.getHeight();
 
-    var stats = new Stats();
-    document.getElementsByClassName('example-container')[0]
-        .appendChild(stats.dom);
-    stats.dom.style.position = 'absolute';
-    stats.dom.style.left = '10px';
-    stats.dom.style.top = '10px';
-
-    zr.animation.on('frame', function () {
-        stats.begin();
-        stats.end();
+    var t1 = new zrender.Text({
+        style: {
+            text: 'zrender',
+            textAlign: 'center',
+            textVerticalAlign: 'middle',
+            fontSize: 200,
+            fontFamily: 'Lato',
+            fontWeight: 'bolder',
+            textFill: '#0ff',
+            blend: 'lighten'
+        },
+        position: [w / 2 + 5, h / 2]
     });
+    zr.add(t1);
 
-    var spray = function(x, y) {
-        var cnt = 200;
-        var centerTolerance = 0;
-        var radius = 10;
-        var particles = [];
-        var duration = 3000;
-        var color = Math.random() * 260;
-        var maxVx = 1000 + Math.random() * 1500;
-        var maxVy = 1000 + Math.random() * 1500;
+    var t2 = new zrender.Text({
+        style: {
+            text: 'zrender',
+            textAlign: 'center',
+            textVerticalAlign: 'middle',
+            fontSize: 200,
+            fontFamily: 'Lato',
+            fontWeight: 'bolder',
+            textFill: '#f0f',
+            blend: 'lighten'
+        },
+        position: [w / 2, h / 2]
+    });
+    zr.add(t2);
 
-        for (var i = 0; i < cnt; ++i) {
-            (function () {
-                var x0 = x + centerTolerance * (Math.random() - 1);
-                var y0 = y + centerTolerance * (Math.random() - 1);
-                var opacity = Math.random() * 0.5 + 0.5;
+    var lines = [];
+    for (var i = 0; i < 16; ++i) {
+        var line = new zrender.Rect({
+            shape: {
+                x: w * (Math.random() - 0.3),
+                y: h * Math.random(),
+                width: w * (Math.random() + 0.3),
+                height: Math.random() * 8
+            },
+            style: {
+                fill: ['#ff0', '#f0f', '#0ff', '#00f'][Math.floor(Math.random() * 4)],
+                blend: 'lighten',
+                opacity: 0
+            }
+        });
+        zr.add(line);
+        lines.push(line);
+    }
 
-                var particle = new zrender.Circle({
-                    shape: {
-                        cx: 0,
-                        cy: 0,
-                        r: radius * (0.5 + 0.5 * Math.random())
-                    },
-                    style: {
-                        fill: 'hsl(' + Math.floor(color + Math.random() * 100)
-                            + ', 80%, '
-                            + Math.floor(Math.random() * 40 + 40) + '%)',
-                        opacity: opacity
-                    },
-                    position: [x0, y0]
-                });
-                zr.add(particle);
-                particles.push(particle);
-
-                particle._t = 0;
-                particle._opacity = opacity;
-
-                var animator = particle.animate('');
-                var vx = (Math.random() - 0.5) * maxVx;
-                var vy = (Math.random() - 1.2) * maxVy;
-                var ay = 8000;
-                var t0 = 0;
-
-                animator
-                    .when(duration, {
-                        _t: 1
-                    })
-                    .during(function (p, _t) {
-                        var dt = _t - t0;
-                        var x1 = p.position[0] + vx * dt;
-                        var y1 = p.position[1] + vy * dt;
-
-                        p.position = [x1, y1];
-                        p.setStyle({
-                            opacity: p._opacity * (1 - _t)
-                        });
-
-                        vy = vy + ay * dt;
-                        t0 = _t;
-                    })
-                    .done(function () {
-                        zr.remove(particle);
-                    })
-                    .start();
-            })();
-        }
-    };
-
-    spray(w / 2, h / 2);
     setInterval(function () {
-        spray(w * Math.random(), h * Math.random());
-    }, 1000);
+        if (Math.random() > 0.2) {
+            t2.attr('position', [w / 2 + Math.random() * 50, h / 2]);
+
+            for (var i = 0; i < lines.length; ++i) {
+                lines[i].attr('shape', {
+                    x: w * Math.random(),
+                    y: h * Math.random(),
+                    width: w * Math.random(),
+                    height: Math.random() * 8
+                });
+                lines[i].attr('style', {
+                    opacity: 1
+                });
+            }
+
+            setTimeout(function () {
+                t2.attr('position', [w / 2, h / 2]);
+
+
+                for (var i = 0; i < lines.length; ++i) {
+                    lines[i].attr('style', {
+                        opacity: 0
+                    });
+                }
+            }, 100);
+        }
+    }, 500);
 };
 </script>
 
 
         <a class="source-link" target="_blank"
-            href="https://raw.githubusercontent.com/ecomfe/zrender-doc/master/src/_examples/particles.md">
+            href="https://raw.githubusercontent.com/ecomfe/zrender-doc/master/src/_examples/glitched_text.md">
             View Source
         </a>
     </div>
