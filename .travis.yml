@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - '4'
+  - '6'
+  - '8'
+before_script:
+  - npm install -g gulp-cli
+  - npm i
+  - gem install jekyll bundler
+script:
+  - gulp
+  - npm start
+  - npm run build
