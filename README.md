@@ -1,4 +1,4 @@
-# ZRender Documentation
+# ZRender Documentation [![Build Status](https://travis-ci.org/hiwanz/zrender-doc.svg?branch=master)](https://travis-ci.org/hiwanz/zrender-doc)
 
 ## Installation
 
