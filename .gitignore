@@ -4,3 +4,4 @@ dist
 node_modules
 src/Gemfile.lock
 src/lib
+package-lock.json
