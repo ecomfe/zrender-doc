@@ -9,5 +9,5 @@ before_script:
   - gem install jekyll bundler
 script:
   - gulp
-  - npm start
   - npm run build
+  - npm start
