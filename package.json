@@ -2,6 +2,11 @@
   "name": "zrender-doc",
   "version": "1.0.0",
   "description": "ZRender Documentation",
+  "scripts": {
+    "prestart": "bundle install --gemfile=src/Gemfile",
+    "start": "jekyll serve --source ./src",
+    "build": "jekyll b --source ./src --config ./src/_config_release.yml"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ecomfe/zrender-doc.git"

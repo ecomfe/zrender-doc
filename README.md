@@ -1,27 +1,37 @@
 # ZRender Documentation
 
-## Build
+## Installation
 
-For the first time:
+Before you start and run this project, make sure you have `Nodejs` and `gulp` installed. And if you want to build the source on Windows, you will also need to install `Ruby` and `Bundler`
+
+> If you have problems installing Jekyll, please refer to [Jekyll's official site](https://jekyllrb.com/docs/installation/).
+
+Install `gulp`
+
+```
+npm i -g gulp
+```
+
+Install dependencies
 
 ```
 npm i
-npm i -g gulp
-cd src
-bundle install
 ```
 
-> If you have problem installing Jekyll, please refer to [Jekyll's official site](https://jekyllrb.com/docs/installation/).
-
-Watch asset files (css, js, ...) changes:
+Copy asset files (css, js, ...) to source directory:
 
 ```
-gulp       # copies and compresses assets
+gulp
 ```
+
+## Preview
+
+To preview docs, simply run `npm start`, then open [http://localhost:4000/](http://localhost:4000/) in your browser, you can change the default url and port in `./src/_config.yml`
+
+## Build
 
 Open another terminal window and:
 
 ```
-cd src
-jekyll b --config _config_release.yml   # build documentation to dist
+npm run build  # build documentation to dist
 ```
