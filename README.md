@@ -1,5 +1,7 @@
 # ZRender Documentation
 
+[![Build Status](https://travis-ci.org/ecomfe/zrender-doc.svg?branch=master)](https://travis-ci.org/ecomfe/zrender-doc)
+
 ## Installation
 
 Before you start and run this project, make sure you have `Nodejs` and `gulp` installed. And if you want to build the source on Windows, you will also need to install `Ruby` and `Bundler`

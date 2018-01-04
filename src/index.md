@@ -5,10 +5,6 @@ title: 开始使用 ZRender
 
 ZRender 是二维绘图引擎，它提供 Canvas、SVG、VML 等多种渲染方式。ZRender 也是 [ECharts](http://echarts.baidu.com/) 的渲染器。
 
-ZRender 官网正在开发中，为了让大家尽早可以使用，我们先开放了[文档]({{ site.url }}/api.html)和这篇教程，希望对大家有帮助。
-
-
-
 ## 下载 ZRender
 
 ZRender 项目在 GitHub 上的地址是：[https://github.com/ecomfe/zrender](https://github.com/ecomfe/zrender)。也可以使用 `npm install zrender` 下载。
@@ -61,5 +57,28 @@ zr.add(circle);
 ```
 
 创建了一个圆心在 `[150, 50]` 位置，半径为 `40` 像素的圆，并将其添加到画布中。
+
+
+## 修改图形元素属性
+
+通过 `a = new zrender.XXX` 方法创建了图形元素之后，可以用 `a.shape` 等形式获取到创建时输入的属性，但是如果需要对其进行修改，应该使用 [`a.attr(key, value)`]({{ site.url }}/api.html#zrenderelementattrkey-value) 的形式修改，否则不会触发图形的重绘。例子：
+
+
+```js
+var circle = new zrender.Circle({
+    shape: {
+        cx: 150,
+        cy: 50,
+        r: 40
+    }
+});
+zr.add(circle);
+
+console.log(circle.shape.r); // 40
+circle.attr('shape', {
+    r: 50 // 只更新 r。cx、cy 将保持不变。
+});
+```
+
 
 请参考[文档]({{ site.url }}/api.html)了解更多。

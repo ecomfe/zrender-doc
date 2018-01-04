@@ -52,8 +52,6 @@
     <h1>开始使用 ZRender</h1>
     <p>ZRender 是二维绘图引擎，它提供 Canvas、SVG、VML 等多种渲染方式。ZRender 也是 <a href="http://echarts.baidu.com/">ECharts</a> 的渲染器。</p>
 
-<p>ZRender 官网正在开发中，为了让大家尽早可以使用，我们先开放了<a href="https://ecomfe.github.io/zrender-doc/public/api.html">文档</a>和这篇教程，希望对大家有帮助。</p>
-
 <h2 id="下载-zrender">下载 ZRender</h2>
 
 <p>ZRender 项目在 GitHub 上的地址是：<a href="https://github.com/ecomfe/zrender">https://github.com/ecomfe/zrender</a>。也可以使用 <code class="highlighter-rouge">npm install zrender</code> 下载。</p>
@@ -100,6 +98,26 @@
 </div>
 
 <p>创建了一个圆心在 <code class="highlighter-rouge">[150, 50]</code> 位置，半径为 <code class="highlighter-rouge">40</code> 像素的圆，并将其添加到画布中。</p>
+
+<h2 id="修改图形元素属性">修改图形元素属性</h2>
+
+<p>通过 <code class="highlighter-rouge">a = new zrender.XXX</code> 方法创建了图形元素之后，可以用 <code class="highlighter-rouge">a.shape</code> 等形式获取到创建时输入的属性，但是如果需要对其进行修改，应该使用 <a href="https://ecomfe.github.io/zrender-doc/public/api.html#zrenderelementattrkey-value"><code class="highlighter-rouge">a.attr(key, value)</code></a> 的形式修改，否则不会触发图形的重绘。例子：</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">circle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">zrender</span><span class="p">.</span><span class="nx">Circle</span><span class="p">({</span>
+    <span class="na">shape</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">cx</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+        <span class="na">cy</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="na">r</span><span class="p">:</span> <span class="mi">40</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">zr</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">circle</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">circle</span><span class="p">.</span><span class="nx">shape</span><span class="p">.</span><span class="nx">r</span><span class="p">);</span> <span class="c1">// 40</span>
+<span class="nx">circle</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'shape'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">r</span><span class="p">:</span> <span class="mi">50</span> <span class="c1">// 只更新 r。cx、cy 将保持不变。</span>
+<span class="p">});</span>
+</code></pre>
+</div>
 
 <p>请参考<a href="https://ecomfe.github.io/zrender-doc/public/api.html">文档</a>了解更多。</p>
 
