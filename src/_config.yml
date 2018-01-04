@@ -33,7 +33,7 @@ sass:
     sass_dir: css
     style: compressed
 
-destination: ../public
+destination: ./public
 
 collections:
   examples:

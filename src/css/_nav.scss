@@ -39,7 +39,14 @@
         display: inline-block;
     }
 
+        .navbar-logo-img {
+            display: inline-block;
+            width: 20px;
+            margin: 0 10px;
+        }
+
         .navbar-logo-text {
+            display: inline-block;
             color: $clr-head;
             font-size: 1.4rem;
             font-weight: bold;
