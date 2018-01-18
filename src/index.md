@@ -3,7 +3,14 @@ layout: tutorial
 title: 开始使用 ZRender
 ---
 
-ZRender 是二维绘图引擎，它提供 Canvas、SVG、VML 等多种渲染方式。ZRender 也是 [ECharts](http://echarts.baidu.com/) 的渲染器。
+<a class="github-button" href="https://github.com/ecomfe/zrender"
+    data-icon="octicon-star"
+    data-show-count="true"
+    aria-label="Star ecomfe/zrender on GitHub">
+    Star
+</a>
+
+[ZRender](https://github.com/ecomfe/zrender) 是二维绘图引擎，它提供 Canvas、SVG、VML 等多种渲染方式。ZRender 也是 [ECharts](http://echarts.baidu.com/) 的渲染器。
 
 ## 下载 ZRender
 
@@ -82,3 +89,6 @@ circle.attr('shape', {
 
 
 请参考[文档]({{ site.url }}/api.html)了解更多。
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
