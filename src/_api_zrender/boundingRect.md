@@ -69,7 +69,7 @@
 
 #### 返回值
 
-相交部分的包围盒，类型：[`zrender.BoundingRect`](#zrenderboundingrect)。
+是否相交，类型：`boolean`。
 
 
 
