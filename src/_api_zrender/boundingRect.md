@@ -75,14 +75,10 @@
 
 ### zrender.BoundingRect.union(other)
 
-与另一个包围盒求并集，得到的也是一个包围盒。
+与另一个包围盒求并集，将结果更新到原本的包围盒。
 
 #### 参数
 
 |名称|类型|默认值|描述|
 |---|---|---|---|
 |other|[`zrender.BoundingRect`](#zrenderboundingrect)||另一个包围盒。|
-
-#### 返回值
-
-新的包围盒，类型：[`zrender.BoundingRect`](#zrenderboundingrect)。

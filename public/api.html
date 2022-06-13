@@ -639,7 +639,7 @@
 
     <div class="api-content">
         <h2 id="zrender-api">zrender</h2>
-        
+
             <h3 id="zrenderdisposezr">zrender.dispose(zr)</h3>
 
 <h4 id="参数">参数</h4>
@@ -673,7 +673,7 @@
 
 <p><a href="#zrenderinitdom-opts">zrender.init</a>。</p>
 
-        
+
             <h3 id="zrenderinitdom-opts">zrender.init(dom, opts)</h3>
 
 <p>得到一个 ZRender 的实例，实例属性及方法参见<a href="#zrender-instance-api">实例 API</a>。</p>
@@ -737,12 +737,12 @@
 
 <p><a href="#zrenderdisposezr">zrender.dispose</a>。</p>
 
-        
+
             <h3 id="zrenderversion">zrender.version</h3>
 
 <p>类型：<code class="highlighter-rouge">'string'</code>，ZRender 版本号。</p>
 
-        
+
             <h3 id="zrenderanimatable">zrender.Animatable</h3>
 
 <p>支持动画的对象。</p>
@@ -918,7 +918,7 @@
 
 <p><code class="highlighter-rouge">this</code>。</p>
 
-        
+
             <h3 id="zrenderanimator">zrender.Animator</h3>
 
 <p>动画对象。</p>
@@ -1139,7 +1139,7 @@
 
 <p><code class="highlighter-rouge">this</code>。</p>
 
-        
+
             <h3 id="zrenderboundingrect">zrender.BoundingRect</h3>
 
 <p>包围盒。</p>
@@ -1280,11 +1280,11 @@
 
 <h4 id="返回值-2">返回值</h4>
 
-<p>相交部分的包围盒，类型：<a href="#zrenderboundingrect"><code class="highlighter-rouge">zrender.BoundingRect</code></a>。</p>
+<p>是否相交，类型：<code class="highlighter-rouge">boolean</code>。</p>
 
 <h3 id="zrenderboundingrectunionother">zrender.BoundingRect.union(other)</h3>
 
-<p>与另一个包围盒求并集，得到的也是一个包围盒。</p>
+<p>与另一个包围盒求并集，将结果更新到原本的包围盒。</p>
 
 <h4 id="参数-3">参数</h4>
 
@@ -1307,11 +1307,6 @@
   </tbody>
 </table>
 
-<h4 id="返回值-3">返回值</h4>
-
-<p>新的包围盒，类型：<a href="#zrenderboundingrect"><code class="highlighter-rouge">zrender.BoundingRect</code></a>。</p>
-
-        
             <h3 id="zrendercolor">zrender.color</h3>
 
 <p><strong>静态类</strong></p>
@@ -1569,7 +1564,7 @@
 
 <p>颜色字符串，如：<code class="highlighter-rouge">'rgba(255, 0, 0, 0.2)'</code>，类型：<code class="highlighter-rouge">string</code>。</p>
 
-        
+
             <h3 id="zrenderdisplayable">zrender.Displayable</h3>
 
 <p><strong>继承自 <a href="#zrenderelement">zrender.Element</a></strong></p>
@@ -2065,7 +2060,7 @@
 
 <p><a href="">zrender.Displayable.contain</a></p>
 
-        
+
             <h3 id="zrenderarc">zrender.Arc</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2137,7 +2132,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderbeziercurve">zrender.BezierCurve</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2215,7 +2210,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrendercircle">zrender.Circle</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2269,7 +2264,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrendercompoundpath">zrender.CompoundPath</h3>
 
 <p><strong>继承自 <a href="#zrenderpath">zrender.Path</a></strong></p>
@@ -2305,7 +2300,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderdroplet">zrender.Droplet</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2365,7 +2360,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderellipse">zrender.Ellipse</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2425,7 +2420,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderheart">zrender.Heart</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2485,7 +2480,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderimage">zrender.Image</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2551,7 +2546,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderisogon">zrender.Isogon</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2611,7 +2606,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderline">zrender.Line</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2677,7 +2672,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderpath">zrender.Path</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2754,7 +2749,7 @@
 
 <p><a href="https://github.com/ecomfe/zrender/blob/master/test/pin.html">这个例子</a>展示的是如何通过扩展 <code class="highlighter-rouge">Path</code> 得到新图形。</p>
 
-        
+
             <h3 id="zrenderpolygon">zrender.Polygon</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2812,7 +2807,7 @@
 
 <p>如果要创建仅含描边的多边形，请使用 <a href="#zrenderpolyline">Polyline</a>。</p>
 
-        
+
             <h3 id="zrenderpolyline">zrender.Polyline</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2870,7 +2865,7 @@
 
 <p>如果要创建填充的多边形，请使用 <a href="#zrenderpolygon">Polygon</a>。</p>
 
-        
+
             <h3 id="zrenderrect">zrender.Rect</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -2936,7 +2931,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderrose">zrender.Rose</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -3002,7 +2997,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrendersector">zrender.Sector</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -3080,7 +3075,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderstar">zrender.Star</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -3146,7 +3141,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrendertext">zrender.Text</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -3176,7 +3171,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrendertrochoid">zrender.Trochoid</h3>
 
 <p><strong>继承自 <a href="#zrenderdisplayable">zrender.Displayable</a></strong></p>
@@ -3248,7 +3243,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderelement">zrender.Element</h3>
 
 <p><strong>继承自 <a href="#zrenderanimatable">zrender.Animatable</a>、 <a href="#zrendertransformable">zrender.Transformable</a>、 <a href="#zrendereventful">zrender.Eventful</a></strong></p>
@@ -3410,7 +3405,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrendereventful">zrender.Eventful</h3>
 
 <p>支持事件的元素。</p>
@@ -3602,7 +3597,7 @@
 
 <p><code class="highlighter-rouge">this</code>。</p>
 
-        
+
             <h3 id="zrendergradient">zrender.Gradient</h3>
 
 <p><strong>抽象类</strong></p>
@@ -3673,7 +3668,7 @@
   <p>如果想要清除渐变色，可以使用 <code class="highlighter-rouge">this.colorStops = []</code>。</p>
 </blockquote>
 
-        
+
             <h3 id="zrendergroup">zrender.Group</h3>
 
 <p><strong>继承自 <a href="#zrenderelement">zrender.Element</a></strong></p>
@@ -3905,7 +3900,7 @@
 
 <p>类型：<code class="highlighter-rouge">boolean</code>，默认值：<code class="highlighter-rouge">false</code>，所有子孙元素是否响应鼠标事件。</p>
 
-        
+
             <h3 id="zrenderlineargradient">zrender.LinearGradient</h3>
 
 <p><strong>继承自 <a href="#zrendergradient">zrender.Gradient</a></strong></p>
@@ -3965,7 +3960,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrendermatrix">zrender.matrix</h3>
 
 <p><strong>静态类</strong></p>
@@ -4247,7 +4242,7 @@
 
 <p>修改后的 <code class="highlighter-rouge">out</code>，类型：<code class="highlighter-rouge">Float32Array|number[]</code>。</p>
 
-        
+
             <h3 id="zrender-path">zrender.path</h3>
 
 <p><strong>静态类</strong></p>
@@ -4351,7 +4346,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderpattern">zrender.Pattern</h3>
 
 <p>图案。</p>
@@ -4385,7 +4380,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderradialgradient">zrender.RadialGradient</h3>
 
 <p><strong>继承自 <a href="#zrendergradient">zrender.Gradient</a></strong></p>
@@ -4439,7 +4434,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrendertransformable">zrender.Transformable</h3>
 
 <p>可进行变换的对象，变换包括：位移、旋转、缩放。</p>
@@ -4587,14 +4582,14 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderutil">zrender.util</h3>
 
 <p><strong>静态类</strong></p>
 
 <p>常用辅助函数。</p>
 
-        
+
             <h3 id="zrenderutilbindfunc-context">zrender.util.bind(func, context)</h3>
 
 <p>修改执行上下文。</p>
@@ -4624,7 +4619,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderutilclonesource">zrender.util.clone(source)</h3>
 
 <p>深度拷贝一个对象。</p>
@@ -4652,7 +4647,7 @@
 
 <p>克隆结果，类型：<code class="highlighter-rouge">Object|Array|TypedArray|number|string|null|undefined</code>。</p>
 
-        
+
             <h3 id="zrenderutilcreatecanvas">zrender.util.createCanvas()</h3>
 
 <p>获得一个 Canvas，不设置宽高。相当于 <code class="highlighter-rouge">document.createElement('canvas')</code>。</p>
@@ -4665,7 +4660,7 @@
 
 <p><a href="#zrenderutilgetcontext">zrender.util.getContext</a>。</p>
 
-        
+
             <h3 id="zrenderutilcurryfunc">zrender.util.curry(func)</h3>
 
 <p>函数柯里化。</p>
@@ -4689,7 +4684,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderutildefaultstarget-source-overlay">zrender.util.defaults(target, source, overlay)</h3>
 
 <p>将一个对象中的元素赋给另一个元素。</p>
@@ -4733,7 +4728,7 @@
 
 <p><a href="#zrenderutilmixintarget-source-overlay">zrender.util.mixin</a>。</p>
 
-        
+
             <h3 id="zrenderutileacharray-cb-context">zrender.util.each(array, cb, context)</h3>
 
 <p>遍历数组。相当于 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">Array.prototype.forEach</a>。</p>
@@ -4769,7 +4764,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderutilextendtarget-source">zrender.util.extend(target, source)</h3>
 
 <p>将 <code class="highlighter-rouge">source</code> 中非继承来的属性赋给 <code class="highlighter-rouge">target</code>。</p>
@@ -4803,7 +4798,7 @@
 
 <p>拷贝结果，即 <code class="highlighter-rouge">target</code>。</p>
 
-        
+
             <h3 id="zrenderutilfilterarray-cb-context">zrender.util.filter(array, cb, context)</h3>
 
 <p>过滤元素。相当于 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.prototype.filter</a>。</p>
@@ -4839,7 +4834,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderutilfindarray-cb-context">zrender.util.find(array, cb, context)</h3>
 
 <p>相当于 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.prototype.find</a>。</p>
@@ -4879,7 +4874,7 @@
 
 <p>返回数组 <code class="highlighter-rouge">array</code> 中第一个找到的元素，类型：<code class="highlighter-rouge">*</code>。</p>
 
-        
+
             <h3 id="zrenderutilgetcontext">zrender.util.getContext()</h3>
 
 <p>获得一个 Canvas 的绘制上下文。相当于 <code class="highlighter-rouge">document.createElement('canvas').getContext('2d')</code>。</p>
@@ -4923,7 +4918,7 @@
 
 <p><a href="#zrenderutilcreatecanvas">zrender.util.createCanvas</a>。</p>
 
-        
+
             <h3 id="zrenderutilindexofarray-value">zrender.util.indexOf(array, value)</h3>
 
 <p>查询数组中元素，返回下标。</p>
@@ -4957,7 +4952,7 @@
 
 <p>下标，类型：<code class="highlighter-rouge">number</code>。</p>
 
-        
+
             <h3 id="zrenderutilinheritsclazz-baseclazz">zrender.util.inherits(clazz, baseClazz)</h3>
 
 <p>继承一个类，<code class="highlighter-rouge">baseClazz</code> 会继承 <code class="highlighter-rouge">clazz</code> 的方法、属性，<code class="highlighter-rouge">clazz</code> 会有 <code class="highlighter-rouge">superClass</code> 属性，指向 <code class="highlighter-rouge">baseClazz</code>。</p>
@@ -4987,7 +4982,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderutilisarraydata">zrender.util.isArray(data)</h3>
 
 <p>是否是数组。</p>
@@ -5019,7 +5014,7 @@
 
 <p><a href="#zrenderutilisarraylikedata">zrender.util.isArrayLike</a>。</p>
 
-        
+
             <h3 id="zrenderutilisfunctiondata">zrender.util.isFunction(data)</h3>
 
 <p>是否是函数。</p>
@@ -5047,7 +5042,7 @@
 
 <p>是否是函数，类型：<code class="highlighter-rouge">boolean</code>。</p>
 
-        
+
             <h3 id="zrenderutilisobjectdata">zrender.util.isObject(data)</h3>
 
 <p>是否是对象。</p>
@@ -5075,7 +5070,7 @@
 
 <p>是否是对象，类型：<code class="highlighter-rouge">boolean</code>。</p>
 
-        
+
             <h3 id="zrenderutilisstringdata">zrender.util.isString(data)</h3>
 
 <p>是否是字符串。</p>
@@ -5103,7 +5098,7 @@
 
 <p>是否是字符串，类型：<code class="highlighter-rouge">boolean</code>。</p>
 
-        
+
             <h3 id="zrenderutilmaparray-cb-context">zrender.util.map(array, cb, context)</h3>
 
 <p>映射数组。相当于 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array.prototype.map</a>。</p>
@@ -5139,7 +5134,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderutilmergetarget-source-overwrite">zrender.util.merge(target, source, overwrite)</h3>
 
 <p>拷贝一个对象。</p>
@@ -5179,7 +5174,7 @@
 
 <p>拷贝结果，即 <code class="highlighter-rouge">target</code>。</p>
 
-        
+
             <h3 id="zrenderutilreducearray-cb-context">zrender.util.reduce(array, cb, context)</h3>
 
 <p>相当于 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce">Array.prototype.reduce</a>。</p>
@@ -5215,7 +5210,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="zrenderutilslicearray-start-end">zrender.util.slice(array, start, end)</h3>
 
 <p>相当于 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice</a>。</p>
@@ -5255,7 +5250,7 @@
 
 <p>数组 <code class="highlighter-rouge">array</code> 在 <code class="highlighter-rouge">start</code>（包含）位置到 <code class="highlighter-rouge">end</code>（不包含）位置的浅拷贝数组，类型：<code class="highlighter-rouge">[]</code>。</p>
 
-        
+
             <h3 id="zrendervector">zrender.vector</h3>
 
 <p><strong>静态类</strong></p>
@@ -6021,10 +6016,10 @@
 
 <p>输出向量，类型：<code class="highlighter-rouge">Float32Array|number[]</code>。</p>
 
-        
+
 
         <h2 id="zrender-instance-api">zrender 实例</h2>
-        
+
             <h3 id="addel">add(el)</h3>
 
 <p>向画布内添加元素。</p>
@@ -6054,7 +6049,7 @@
 
 <p><a href="#removeel">remove</a>。</p>
 
-        
+
             <h3 id="addhoverel-style">addHover(el, style)</h3>
 
 <p>将元素添加到高亮层。添加到高亮层后，可以通过 <a href="#removehoverel"><code class="highlighter-rouge">removeHover</code></a> 移除。</p>
@@ -6090,22 +6085,22 @@
 
 <p><a href="#removehoverel"><code class="highlighter-rouge">removeHover</code></a>。</p>
 
-        
+
             <h3 id="animation">animation</h3>
 
 <p>类型：<code class="highlighter-rouge">Animatoin</code>，动画。</p>
 
-        
+
             <h3 id="clear">clear()</h3>
 
 <p>清除所有对象和画布。</p>
 
-        
+
             <h3 id="clearanimation">clearAnimation()</h3>
 
 <p>停止所有动画。</p>
 
-        
+
             <h3 id="clearhover">clearHover()</h3>
 
 <p>清除高亮层中所有的元素。</p>
@@ -6114,7 +6109,7 @@
 
 <p><a href="#removehoverel"><code class="highlighter-rouge">removeHover</code></a>、<a href="#addhoverel"><code class="highlighter-rouge">addHover</code></a>。</p>
 
-        
+
             <h3 id="configlayerzlevel-config">configLayer(zLevel, config)</h3>
 
 <p>改变某个层的配置。</p>
@@ -6164,22 +6159,22 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="dispose">dispose()</h3>
 
 <p>移除自身。当不再需要使用该实例时，调用该方法以释放内存。</p>
 
-        
+
             <h3 id="dom">dom</h3>
 
 <p>类型：<code class="highlighter-rouge">HTMLDomElement</code>，绘图容器。</p>
 
-        
+
             <h3 id="flush">flush()</h3>
 
 <p>立即触发 refresh 和 refreshHover 所标记的重绘操作。</p>
 
-        
+
             <h3 id="getheight">getHeight()</h3>
 
 <p>获取画布高度。</p>
@@ -6188,7 +6183,7 @@
 
 <p><a href="#getwidth">getWidth</a>。</p>
 
-        
+
             <h3 id="getwidth">getWidth()</h3>
 
 <p>获取画布宽度。</p>
@@ -6197,12 +6192,12 @@
 
 <p><a href="#getheight">getHeight</a>。</p>
 
-        
+
             <h3 id="id">id</h3>
 
 <p>类型：<code class="highlighter-rouge">string</code>，<code class="highlighter-rouge">zrender</code> 实例的唯一标识符。</p>
 
-        
+
             <h3 id="offeventname-eventhandler">off(eventName, eventHandler)</h3>
 
 <p>取消绑定事件处理。</p>
@@ -6238,7 +6233,7 @@
 
 <p><a href="#oneventname-eventhandler-context">on</a>。</p>
 
-        
+
             <h3 id="oneventname-eventhandler-context">on(eventName, eventHandler, context)</h3>
 
 <p>绑定事件处理。</p>
@@ -6280,27 +6275,27 @@
 
 <p><a href="#offeventname-eventhandler">off</a>。</p>
 
-        
+
             <h3 id="refresh">refresh()</h3>
 
 <p>刷新画布，将在下一个渲染帧的时候被刷新。</p>
 
-        
+
             <h3 id="refreshhover">refreshHover()</h3>
 
 <p>刷新高亮层，将在下一个渲染帧的时候被刷新。</p>
 
-        
+
             <h3 id="refreshhoverimmediately">refreshHoverImmediately()</h3>
 
 <p>强制立即刷新高亮层。</p>
 
-        
+
             <h3 id="refreshimmediately">refreshImmediately()</h3>
 
 <p>强制立即刷新画布。</p>
 
-        
+
             <h3 id="removeel">remove(el)</h3>
 
 <p>从画布内移除元素。</p>
@@ -6330,7 +6325,7 @@
 
 <p><a href="#addel">add</a>。</p>
 
-        
+
             <h3 id="removehoverel">removeHover(el)</h3>
 
 <p>将元素从高亮层移除。</p>
@@ -6361,7 +6356,7 @@
 <p><a href="#addhoverel">addHover</a>。</p>
 
 
-        
+
             <h3 id="resizeopts">resize(opts)</h3>
 
 <p>更新画布大小。当容器改变大小时，应调用此方法。</p>
@@ -6399,7 +6394,7 @@
   </tbody>
 </table>
 
-        
+
             <h3 id="triggereventname-event">trigger(eventName, event)</h3>
 
 <p>手动触发事件。</p>
@@ -6435,7 +6430,7 @@
 
 <p><a href="#oneventname-eventhandler-context">on</a>、<a href="#offeventname-eventhandler">off</a>。</p>
 
-        
+
     </div>
 </div>
 
