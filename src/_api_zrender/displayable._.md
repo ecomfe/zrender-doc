@@ -26,6 +26,8 @@
 |opts.draggable|`boolean`|`false`|图形是否可拖曳。|
 |opts.invisible|`boolean`|`false`|图形是否不可见，为 `true` 时不绘制图形，但是仍能触发鼠标事件。|
 |opts.progressive|`number`|`-1`|是否渐进式渲染。当图形元素过多时才使用，用大于 0 的数字表示渲染顺序。|
+|opts.incremental|`boolean`|`false`|是否增量式渲染。增量式渲染的意思是，在每帧渲染的时候，不擦除之前帧的该元素直接再次渲染。增量渲染的元素在单独的层中进行渲染。SVG 模式不支持。具体请参考[源码](https://github.com/ecomfe/zrender/blob/master/src/graphic/IncrementalDisplayable.ts)。|
+|opts.ignoreCoarsePointer|`boolean`|`false`|（5.4.0 版本起支持）是否忽略增加响应范围。默认情况下，在移动设备上，为了提高用户体验，可点击元素的响应范围会被扩大处理。如果某些元素不希望扩大响应范围，则应设为 `true`。|
 |opts.rectHover|`boolean`|`false`|是否使用包围盒检验鼠标是否移动到物体。`false` 则检测元素实际的内容。|
 |opts.silent|`boolean`|`false`|是否响应鼠标事件。|
 |opts.style.fill|`string`|`'#000'`|填充样式。|
